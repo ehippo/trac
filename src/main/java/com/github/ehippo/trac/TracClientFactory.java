@@ -11,6 +11,10 @@ public class TracClientFactory {
 
     private final ClientFactory clientFactory;
 
+    public TracClientFactory(XmlRpcClient client) {
+        clientFactory = new ClientFactory(client);
+    }
+
     public TracClientFactory(String tracUser, String tracPassword, String tracUrl) throws MalformedURLException {
         final XmlRpcClientConfigImpl conf = new XmlRpcClientConfigImpl();
         conf.setBasicUserName(tracUser);
