@@ -23,12 +23,16 @@ public class TracClientFactory {
         clientFactory = new ClientFactory(client);
     }
 
-    public SystemClient getSystem() {
-        return (SystemClient)clientFactory.newInstance(Thread.currentThread().getContextClassLoader(), SystemClient.class, "system");
-    }
-
     public Search getSearch() {
         return (Search)clientFactory.newInstance(Thread.currentThread().getContextClassLoader(), Search.class, "search");
+    }
+
+    public SearchClientEx getSearchEx() {
+        return new SearchClientEx(getSearch());
+    }
+
+    public SystemClient getSystem() {
+        return (SystemClient)clientFactory.newInstance(Thread.currentThread().getContextClassLoader(), SystemClient.class, "system");
     }
 
     public Ticket getTicket() {
