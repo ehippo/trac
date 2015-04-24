@@ -1,5 +1,5 @@
 package com.github.ehippo.trac;
 
-public interface Wiki {
+public interface WikiClient {
 
 }

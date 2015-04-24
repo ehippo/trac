@@ -27,24 +27,20 @@ public class TracClientFactory {
         clientFactory = new ClientFactory(client);
     }
 
-    public Search getSearch() {
-        return (Search)clientFactory.newInstance(Thread.currentThread().getContextClassLoader(), Search.class, "search");
+    public SearchClient getSearchClient() {
+        return (SearchClient)clientFactory.newInstance(Thread.currentThread().getContextClassLoader(), SearchClient.class, "search");
     }
 
-    public SearchClientEx getSearchEx() {
-        return new SearchClientEx(getSearch());
-    }
-
-    public SystemClient getSystem() {
+    public SystemClient getSystemClient() {
         return (SystemClient)clientFactory.newInstance(Thread.currentThread().getContextClassLoader(), SystemClient.class, "system");
     }
 
-    public Ticket getTicket() {
-        return (Ticket)clientFactory.newInstance(Thread.currentThread().getContextClassLoader(), Ticket.class, "ticket");
+    public TicketClient getTicketClient() {
+        return (TicketClient)clientFactory.newInstance(Thread.currentThread().getContextClassLoader(), TicketClient.class, "ticket");
     }
 
-    public Wiki getWiki() {
-        return (Wiki)clientFactory.newInstance(Thread.currentThread().getContextClassLoader(), Wiki.class, "wiki");
+    public WikiClient getWikiClient() {
+        return (WikiClient)clientFactory.newInstance(Thread.currentThread().getContextClassLoader(), WikiClient.class, "wiki");
     }
 
 }

@@ -6,9 +6,9 @@ import java.util.List;
 
 public class SearchClientEx {
 
-    private final Search searchClient;
+    private final SearchClient searchClient;
 
-    public SearchClientEx(Search searchClient) {
+    public SearchClientEx(SearchClient searchClient) {
         this.searchClient = searchClient;
     }
 

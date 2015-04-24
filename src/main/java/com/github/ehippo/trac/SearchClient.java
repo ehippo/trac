@@ -2,7 +2,7 @@ package com.github.ehippo.trac;
 
 import java.util.List;
 
-public interface Search {
+public interface SearchClient {
 
     /** Retrieve a list of search filters with each element in the form (name, description). 
      * 

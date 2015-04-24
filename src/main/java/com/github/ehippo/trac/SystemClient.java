@@ -54,7 +54,7 @@ public interface SystemClient {
      * Permission required: XML_RPC 
      */
     String methodHelp(String method);
-    
+
     /**
      * This method takes one parameter, the name of a method implemented by the RPC server. 
      * It returns an array of possible signatures for this method. A signature is an array of types. 
