@@ -183,4 +183,8 @@ public class TicketClientEx {
 
     }
 
+    public static class LogEntry {
+
+    }
+
 }
